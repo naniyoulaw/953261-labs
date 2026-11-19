@@ -2,9 +2,9 @@
 
 | | |
 |---|---|
-| **Name** | _your full name_ |
-| **Nickname** | _your nickname_ |
-| **Student ID** | _6xxxxxxxx_ |
+| **Name** | _Siripong Wathisanon_ |
+| **Nickname** | _Tonmai_ |
+| **Student ID** | _692115039_ |
 | **Section** | 701 |
 
 ## How to run
@@ -19,6 +19,8 @@ Then open <http://localhost:3000> and <http://localhost:3000/api/me>.
 ## What I learned today
 
 _Write 2–3 sentences in your own words: what happens between typing a URL and seeing the page?_
+cd to go inside file,ls to check what inside file,node -v for check node version,
+
 
 ## AI-use statement
 
