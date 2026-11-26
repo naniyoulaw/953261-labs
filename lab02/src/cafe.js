@@ -57,9 +57,10 @@ export function menuLine(item) {
 // withDiscount({ ..., price: 45 }, 10) → { ..., price: 41 }   (45 × 0.9 = 40.5 → 41)
 export function withDiscount(item, percent) {
   // TODO
-  return {...item, price: Math.round(
-item.price * (100 - percent) / 100),
-};
+  return {
+    ...item, price: Math.round(
+      item.price * (100 - percent) / 100),
+  };
 }
 
 // Task 7 — reduce + find
@@ -68,7 +69,7 @@ item.price * (100 - percent) / 100),
 // orderTotal(orders[0], menu) → 160   (2 × 45 + 1 × 70)
 export function orderTotal(order, menu) {
   // TODO
-  
+  return order.items.reduce((sum, line) => sum + findItem(menu, line.menuId).price * line.qty, 0);
 }
 
 // Task 8 — map + reduce   (this is quiz Q10 again!)
@@ -76,6 +77,10 @@ export function orderTotal(order, menu) {
 // Return 0 when there are no orders.
 export function averageOrder(orders, menu) {
   // TODO
+  if(orders.length ===0) return 0;
+  const totals = orders.map((order) => orderTotal(order,menu));
+  const grandTotal = totals.reduce((sum,total) => sum+total,0);
+  return Number((grandTotal / orders.length).toFixed(2));
 }
 
 // ───────────── Stretch (optional) ─────────────
@@ -89,4 +94,6 @@ export function bestSeller(orders, menu) {
 // { drink: ["Thai Iced Tea", ...], food: [...], dessert: [...] }
 export function namesByCategory(menu) {
   // TODO
+
+  return
 }
