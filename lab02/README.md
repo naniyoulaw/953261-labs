@@ -18,12 +18,16 @@ npm start        # Part D — the daily report
 
 ## My own function (Part D)
 
-_Name of your function, what it returns, and which array methods it uses._
+orders.forEach((order) => {
+    console.log(`${order.id} ${order.customer} — ${orderTotal(order, menu)} THB`);
+});
+
+this function is used for showing order customer name and order's price
 
 ## What I learned today
 
-_Write 2–3 sentences in your own words: when would you use map, filter, find and reduce?_
-
+find to find the array
+reduce for all in one
 ## AI-use statement
 
-_Did you use an AI tool in this lab? If yes, which one and for what. If no, write "No AI tools used."_
+No
