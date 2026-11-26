@@ -9,13 +9,16 @@
 // menuNames(menu) → ["Thai Iced Tea", "Americano", ...]
 export function menuNames(menu) {
   // TODO
-  
+  const names = menu.map((item) => item.name);
+  return names
 }
 
 // Task 2 — filter
 // Return only the items whose `available` is true.
 export function availableItems(menu) {
   // TODO
+  const avail = menu.filter((item) => item.available == true);
+  return avail
 }
 
 // Task 3 — find
@@ -23,6 +26,8 @@ export function availableItems(menu) {
 // findItem(menu, "F01") → { id: "F01", name: "Khao Soi", ... }
 export function findItem(menu, id) {
   // TODO
+  const find = menu.find((item) => item.id === id);
+  return find
 }
 
 // Task 4 — filter + map
@@ -30,6 +35,8 @@ export function findItem(menu, id) {
 // availableIn(menu, "dessert") → ["Mango Sticky Rice", "Coconut Ice Cream"]
 export function availableIn(menu, category) {
   // TODO
+  const availname = menu.filter((i) => i.available).filter((i) => i.category === category).map((i) => i.name);
+  return availname
 }
 
 // Task 5 — template literal + destructuring
@@ -39,6 +46,9 @@ export function availableIn(menu, category) {
 // Hint: start with  const { name, price, available } = item;
 export function menuLine(item) {
   // TODO
+  const { name, price, available } = item;
+  const sen = `${name} — ${price} THB${available ? "" : " (sold out)"}`;
+  return sen
 }
 
 // Task 6 — spread
@@ -47,6 +57,9 @@ export function menuLine(item) {
 // withDiscount({ ..., price: 45 }, 10) → { ..., price: 41 }   (45 × 0.9 = 40.5 → 41)
 export function withDiscount(item, percent) {
   // TODO
+  return {...item, price: Math.round(
+item.price * (100 - percent) / 100),
+};
 }
 
 // Task 7 — reduce + find
@@ -55,6 +68,7 @@ export function withDiscount(item, percent) {
 // orderTotal(orders[0], menu) → 160   (2 × 45 + 1 × 70)
 export function orderTotal(order, menu) {
   // TODO
+  
 }
 
 // Task 8 — map + reduce   (this is quiz Q10 again!)
