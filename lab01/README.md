@@ -18,10 +18,18 @@ Then open <http://localhost:3000> and <http://localhost:3000/api/me>.
 
 ## What I learned today
 
+<<<<<<< HEAD
 
+=======
+_Write 2–3 sentences in your own words: what happens between typing a URL and seeing the page?_
+>>>>>>> 00c02b6d94f6a3f760a1df533622f23fbda378b2
 cd to go inside file,ls to check what inside file,node -v for check node version,
 
 
 ## AI-use statement
 
+<<<<<<< HEAD
 No
+=======
+_Did you use an AI tool in this lab? If yes, which one and for what (e.g., "ChatGPT to explain a Git error message"). If no, write "No AI tools used."_
+>>>>>>> 00c02b6d94f6a3f760a1df533622f23fbda378b2
